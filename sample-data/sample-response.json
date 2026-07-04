@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "message": "Update submitted successfully",
+  "data": {
+    "date": "04-07-2026",
+    "username": "Naveen Vinod",
+    "todaysTasks": [
+      "Implemented team update form UI",
+      "Configured Google Sheets integration",
+      "Set up GitLab commit history fetch"
+    ],
+    "pendingUploads": "• API integration (API) — Not Yet Started\n• Dashboard rendering (UI) — In Progress\n• Notification system (Backend) — Not Yet Started",
+    "notes": "Working on finalizing the workflow automation pipeline.",
+    "submittedAt": "2026-07-04T18:30:00+05:30",
+    "rowId": "12345"
+  }
+}

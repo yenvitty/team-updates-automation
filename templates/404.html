@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 - Page Not Found</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root {
+    --bg:       #0d0f14;
+    --bg2:      #13161d;
+    --bg3:      #1a1e28;
+    --surface:  #1f2330;
+    --surface2: #252a3a;
+    --border:   rgba(255,255,255,0.07);
+    --border2:  rgba(255,255,255,0.14);
+    --text:     #e8eaf2;
+    --text2:    #8b90a8;
+    --text3:    #555c75;
+    --accent:   #f59e0b;
+    --accent2:  #fbbf24;
+    --blue:     #3b82f6;
+    --blue2:    #60a5fa;
+    --purple:   #8b5cf6;
+    --cyan:     #06b6d4;
+    --green:    #10b981;
+    --red:      #ef4444;
+    --orange:   #f97316;
+    --radius:   14px;
+    --radius-sm:8px;
+    --shadow:   0 4px 24px rgba(0,0,0,0.4);
+    --trans:    0.2s ease;
+  }
+  [data-theme="light"] {
+    --bg:       #f0f2f7;
+    --bg2:      #e8ebf3;
+    --bg3:      #dde1ec;
+    --surface:  #ffffff;
+    --surface2: #f5f7fc;
+    --border:   rgba(0,0,0,0.07);
+    --border2:  rgba(0,0,0,0.13);
+    --text:     #1a1e2e;
+    --text2:    #4a5068;
+    --text3:    #8b90a8;
+    --shadow:   0 4px 24px rgba(0,0,0,0.09);
+  }
+  
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    transition: background var(--trans), color var(--trans);
+    overflow: hidden;
+  }
+
+  /* ── CORNER UTILITIES ── */
+  .top-bar {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .icon-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    border: 1px solid var(--border2);
+    background: var(--surface);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: var(--text2);
+    transition: all var(--trans);
+  }
+  .icon-btn:hover { background: var(--surface2); color: var(--text); }
+  .icon-btn:active { transform: scale(0.93); }
+
+  /* ── 404 CARD LAYOUT ── */
+  .error-wrap {
+    max-width: 440px;
+    width: 100%;
+    text-align: center;
+    animation: fadeUp 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  }
+  
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 44px 32px;
+    box-shadow: var(--shadow);
+    transition: background var(--trans), border-color var(--trans);
+  }
+
+  /* Decorative Alert Ring */
+  .alert-ring {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 28px;
+    color: var(--accent2);
+    font-size: 30px;
+    position: relative;
+  }
+  .alert-ring::after {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 1px dashed var(--border2);
+    opacity: 0.5;
+  }
+
+  .error-code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 54px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, var(--accent2) 0%, var(--orange) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .error-title {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    margin-bottom: 12px;
+    color: var(--text);
+  }
+
+  .error-desc {
+    font-size: 13.5px;
+    color: var(--text2);
+    line-height: 1.65;
+  }
+  
+  .error-desc strong {
+    color: var(--accent2);
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle dark/light mode">
+    <i class="fa-solid fa-sun" id="themeIcon"></i>
+  </button>
+</div>
+
+<div class="error-wrap">
+  <div class="card">
+    <div class="alert-ring">
+      <i class="fa-solid fa-compass-drafting"></i>
+    </div>
+    <div class="error-code">404</div>
+    <h1 class="error-title">Page not found</h1>
+    <p class="error-desc">
+      The page you are trying to access is unavailable. Please check whether the URL's <strong>token</strong> and <strong>date</strong> are correct.
+    </p>
+  </div>
+</div>
+
+<script>
+/* ────────────────────────────────────────────
+   THEME SWITCHER ENGINE
+──────────────────────────────────────────── */
+let isDark = true;
+const themeIcon = document.getElementById('themeIcon');
+const themeToggleBtn = document.getElementById('themeToggle');
+
+function applyTheme(dark) {
+  isDark = dark;
+  document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+  themeIcon.className = dark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+  themeToggleBtn.style.color = dark ? '#fbbf24' : '#8b5cf6';
+}
+
+// Default initialize dark state
+applyTheme(true);
+
+themeToggleBtn.addEventListener('click', () => applyTheme(!isDark));
+</script>
+</body>
+</html>
