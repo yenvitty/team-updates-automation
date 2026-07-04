@@ -59,7 +59,7 @@
 
 3. **Update Webhook URLs**
 
-   Replace all instances of `https://n8n.scrapehero.com/webhook/...` with your n8n webhook URLs.
+    Replace all instances of `${N8N_BASE_URL}/webhook/...` with your n8n webhook URLs.
 
 4. **Activate the Workflow**
 
