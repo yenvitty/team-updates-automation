@@ -948,7 +948,7 @@ fetchBtn.addEventListener('click', async () => {
 
   try {
     const res = await fetch(
-      `https://n8n.scrapehero.com/webhook/4c018acd-928c-4b22-a8dc-208ef6b9cf9f/?user=${user}&date=${reportDate}`
+      `${N8N_BASE_URL}/webhook/your-git-info-webhook-id-here/?user=${user}&date=${reportDate}`
     );
     if (!res.ok) throw new Error(res.status);
     const activities = await res.json();
@@ -1128,7 +1128,7 @@ document.getElementById('submitBtn').addEventListener('click', async () => {
   let success = false;
 
   try {
-    const res = await fetch('https://n8n.scrapehero.com/webhook/66ee745e-ddec-48c8-a3f9-cf83adf73783', {
+    const res = await fetch('${N8N_BASE_URL}/webhook/your-webhook-id-here', {
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify(payload)
@@ -1136,7 +1136,7 @@ document.getElementById('submitBtn').addEventListener('click', async () => {
     success = res.ok;
   } catch {
     try {
-      await fetch('https://n8n.scrapehero.com/webhook/66ee745e-ddec-48c8-a3f9-cf83adf73783', {
+      await fetch('${N8N_BASE_URL}/webhook/your-webhook-id-here', {
         method:'POST', mode:'no-cors',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify(payload)
