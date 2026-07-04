@@ -730,7 +730,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://${GOOGLE_CHAT_WEBHOOK_URL}/v1/spaces/AAQAv-H0en4/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=z8MV6KbtQf_uPmJNzwq-HDhQK9pL_CZXz4fd_9PhXL4",
+        "url": "https://${GOOGLE_CHAT_WEBHOOK_URL}/v1/spaces/${GOOGLE_CHAT_SPACE_ID}/messages?key=${GOOGLE_CHAT_API_KEY}&token=${GOOGLE_CHAT_TOKEN}z8MV6KbtQf_uPmJNzwq-HDhQK9pL_CZXz4fd_9PhXL4",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "={{ $json }}",
@@ -843,7 +843,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://${GOOGLE_CHAT_WEBHOOK_URL}/v1/spaces/AAQAv-H0en4/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=intdgBmozL-U4OJId9az5vTOcLvYTtYjcdoNTOBRikk",
+        "url": "https://${GOOGLE_CHAT_WEBHOOK_URL}/v1/spaces/${GOOGLE_CHAT_SPACE_ID}/messages?key=${GOOGLE_CHAT_API_KEY}&token=${GOOGLE_CHAT_TOKEN}intdgBmozL-U4OJId9az5vTOcLvYTtYjcdoNTOBRikk",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "={{ $json }}",
@@ -966,7 +966,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://${GOOGLE_CHAT_WEBHOOK_URL}/v1/spaces/AAQAv-H0en4/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=z8MV6KbtQf_uPmJNzwq-HDhQK9pL_CZXz4fd_9PhXL4",
+        "url": "https://${GOOGLE_CHAT_WEBHOOK_URL}/v1/spaces/${GOOGLE_CHAT_SPACE_ID}/messages?key=${GOOGLE_CHAT_API_KEY}&token=${GOOGLE_CHAT_TOKEN}z8MV6KbtQf_uPmJNzwq-HDhQK9pL_CZXz4fd_9PhXL4",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "={{ $json }}",
@@ -1094,7 +1094,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://${GOOGLE_CHAT_WEBHOOK_URL}/v1/spaces/AAQAv-H0en4/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=z8MV6KbtQf_uPmJNzwq-HDhQK9pL_CZXz4fd_9PhXL4",
+        "url": "https://${GOOGLE_CHAT_WEBHOOK_URL}/v1/spaces/${GOOGLE_CHAT_SPACE_ID}/messages?key=${GOOGLE_CHAT_API_KEY}&token=${GOOGLE_CHAT_TOKEN}z8MV6KbtQf_uPmJNzwq-HDhQK9pL_CZXz4fd_9PhXL4",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "={{ $json }}",
